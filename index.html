@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <link rel="shortcut icon" href="./images/facebook-logo.png" type="image/png">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./tailwind/tailwind.css">
+</head>
+<body class="bg-gray-100 dark:bg-dark-main">
+    <!-- NAV -->
+    <nav class="bg-white dark:bg-dark-second h-max md:h-14 w-full shadow flex flex-col md:flex-row
+        items-center justify-center md:justify-between fixed top-0 z-50 border-b dark:border-dark-third">
+
+        <!-- LEFT -->
+       <div class="flex items-center justify-between w-full md:w-max px-4 py-2">
+            <a href="#" class="mr-2 hidden md:inline-block">
+                <img src="./images/facebook-logo.png" alt="Facebook" class="w-24 sm:w-20 lg:w-10 h-auto">
+            </a>
+            <a href="#" class="inline-block md:hidden">
+                <img src="./images/facebook-logo-mb.png" alt="Facebook" class="w-32 h-auto">
+            </a>
+            <div class="flex items-center justify-between space-x-1">
+                <div class="relative bg-gray-100 dark:bg-dark-third px-2 py-2 w-10 h-10 sm:w-11 sm:h-11 lg:h-10 lg:w-10
+                    xl:w-max xl:pl-3 xl:pr-8 rounded-full flex items-center justify-center cursor-pointer">
+                    <i class='bx bx-search-alt-2 text-xl xl:mr-2 dark:text-dark-txt'></i>
+                    <input type="text" placeholder="Search Facebook" class="outline-none bg-transparent hidden xl:inline-block">
+                </div>
+                <div class="text-2xl grid place-items-center md:hidden bg-gray-200 dark:bg-dark-third rounded-full w-10 h-10 cursor-pointer
+                    hover:bg-gray-300 dark:text-dark-txt">
+                    <i class='bx bxl-messenger' ></i>
+                </div>
+                <div class="text-2xl grid place-items-center md:hidden bg-gray-200 dark:bg-dark-third rounded-full w-10 h-10 cursor-pointer
+                hover:bg-gray-300 dark:text-dark-txt" id="light-mode-toggle-mb">
+                    <i class='bx bxs-moon' ></i>
+                </div>
+            </div>
+       </div>
+       
+       <!-- CENTER -->
+       <ul class="flex items-center justify-center w-full lg:w-max">
+           <li class="w-1/5 md:w-max text-center">
+               <a href="#" class="w-full text-3xl px-3 py-2 xl:px-12 cursor-pointer text-center inline-block
+                text-blue-500 border-b-4 border-blue-500">
+                   <i class='bx bxs-home' ></i>
+                </a>
+            </li>
+            <li class="w-1/5 md:w-max text-center">
+                <a href="#" class="w-full text-3xl px-3 py-2 xl:px-12 cursor-pointer text-center inline-block
+                rounded-lg text-gray-600 hover:bg-gray-100 dark:hover:bg-dark-third dark:text-dark-txt relative">
+                    <i class='bx bx-movie-play' ></i>
+                    <span class="text-xs absolute top-0 right-1/4 bg-red-500 text-white font-semibold rounded-full px-1 text-center">99+</span>
+                </a>
+            </li>
+            <li class="w-1/5 md:w-max text-center">
+                <a href="#" class="w-full text-3xl px-3 py-2 xl:px-12 cursor-pointer text-center inline-block
+                rounded-lg text-gray-600 hover:bg-gray-100 dark:hover:bg-dark-third dark:text-dark-txt relative">
+                    <i class='bx bx-store' ></i>
+                </a>
+            </li>
+            <li class="w-1/5 md:w-max text-center">
+                <a href="#" class="w-full text-3xl px-3 py-2 xl:px-12 cursor-pointer text-center inline-block
+                rounded-lg text-gray-600 hover:bg-gray-100 dark:hover:bg-dark-third dark:text-dark-txt relative">
+                    <i class='bx bx-group' ></i>
+                </a>
+            </li>
+            <li class="w-1/5 md:w-max text-center hidden md:inline-block">
+                <a href="#" class="w-full text-3xl px-3 py-2 xl:px-12 cursor-pointer text-center inline-block
+                rounded-lg text-gray-600 hover:bg-gray-100 dark:hover:bg-dark-third dark:text-dark-txt relative">
+                    <i class='bx bx-layout' ></i>
+                    <span class="text-xs absolute top-0 right-1/4 bg-red-500 text-white font-semibold rounded-full px-1 text-center">99+</span>
+                </a>
+            </li>
+            <li class="w-1/5 md:w-max text-center inline-block md:hidden">
+                <a href="#" class="w-full text-3xl px-3 py-2 xl:px-12 cursor-pointer text-center inline-block
+                rounded-lg text-gray-600 hover:bg-gray-100 dark:hover:bg-dark-third dark:text-dark-txt relative">
+                    <i class='bx bx-menu' ></i>
+                </a>
+            </li>
+       </ul>
+
+       <!-- RIGHT -->
+       <ul class="hidden md:flex items-center justify-center mx-4">
+           <li class="h-full hidden xl:flex">
+               <a href="" class="inline-flex items-center justify-center p-1 rounded-full
+                hover:bg-gray-200 dark:hover:bg-dark-third mx-1">
+                   <img src="./images/profile.jpg" alt="profile" class="rounded-full h-7 w-7">
+                   <span class="mx-2 font-semibold dark:text-dark-txt">Giang</span>
+               </a>
+            </li>
+            <li>
+                <div class="text-xl hidden xl:grid place-items-center bg-gray-200 dark:bg-dark-third dark:text-dark-txt rounded-full
+                        mx-1 p-3 cursor-pointer hover:bg-gray-300 relative">
+                    <i class='bx bx-plus' ></i>
+                </div>
+             </li>
+             <li>
+                <div class="text-xl hidden xl:grid place-items-center bg-gray-200 dark:bg-dark-third dark:text-dark-txt rounded-full
+                mx-1 p-3 cursor-pointer hover:bg-gray-300 relative">
+                    <i class='bx bxl-messenger' ></i>
+                </div>
+             </li>
+             <li>
+                <div class="text-xl hidden xl:grid place-items-center bg-gray-200 dark:bg-dark-third dark:text-dark-txt rounded-full
+                mx-1 p-3 cursor-pointer hover:bg-gray-300 relative">
+                     <i class='bx bxs-bell' ></i>
+                     <span class="text-xs absolute top-0 right-0 bg-red-500 text-white font-semibold rounded-full px-1 text-center">9</span>
+                </div>
+             </li>
+             <li>
+                <div class="text-xl hidden xl:grid place-items-center bg-gray-200 dark:bg-dark-third dark:text-dark-txt rounded-full
+                mx-1 p-3 cursor-pointer hover:bg-gray-300 relative" id="light-mode-toggle">
+                     <i class='bx bxs-moon' ></i>
+                </div>
+             </li>
+       </ul>
+    </nav>
+    <!-- END NAV -->
+
+    <!-- MAIN -->
+    <div class="flex justify-center h-screen">
+        <!-- LEFT -->
+        <div class="w-1/5 pt-16 hidden h-full xl:flex flex-col fixed top-0 left-0">
+            <ul class="p-4">
+                <li>
+                    <a href="" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-lg transition-all dark:text-dark-txt dark:hover:bg-dark-third">
+                        <img src="./images/profile.jpg" alt="Profile" class="w-10 h-10 rounded-full">
+                        <span class="font-semibold">Nghiêm Đình Giang</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-lg transition-all dark:text-dark-txt dark:hover:bg-dark-third">
+                        <img src="./images/friends.png" alt="Profile" class="w-10 h-10 rounded-full">
+                        <span class="font-semibold">Friends</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-lg transition-all dark:text-dark-txt dark:hover:bg-dark-third">
+                        <img src="./images/page.png" alt="Profile" class="w-10 h-10 rounded-full">
+                        <span class="font-semibold">Pages</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-lg transition-all dark:text-dark-txt dark:hover:bg-dark-third">
+                        <img src="./images/memories.png" alt="Profile" class="w-10 h-10 rounded-full">
+                        <span class="font-semibold">Memories</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-lg transition-all dark:text-dark-txt dark:hover:bg-dark-third">
+                        <img src="./images/group.png" alt="Profile" class="w-10 h-10 rounded-full">
+                        <span class="font-semibold">Groups</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-lg transition-all dark:text-dark-txt dark:hover:bg-dark-third">
+                        <span class="w-10 h-10 rounded-full grid place-items-center bg-gray-200 dark:bg-dark-second">
+                            <i class='bx bxs-chevron-down'></i>
+                        </span>
+                        <span class="font-semibold">See more</span>
+                    </a>
+                </li>
+                <li class="border-b border-gray-200 dark:bg-dark-third mt-6"></li>
+            </ul>
+            <div class="flex items-center justify-between px-4 h-4 group">
+                <span class="font-semibold text-gray-500 text-lg dark:text-dark-txt">Your shortcut</span>
+                <span class="text-blue-500 cursor-pointer hover:bg-gray-200 dark:hover:bg-dark-third p-2 rounded-md hidden 
+                group-hover:inline-block">Edit</span>
+            </div>
+            <ul class="p-4">
+                <li>
+                    <a href="" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-lg transition-all dark:text-dark-txt dark:hover:bg-dark-third">
+                        <img src="./images/g1.jpg" alt="Profile" class="w-10 h-10 rounded-full">
+                        <span class="font-semibold">VNO Hackintosh - Hackintosh Việt Nam</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-lg transition-all dark:text-dark-txt dark:hover:bg-dark-third">
+                        <img src="./images/g2.jpg" alt="Profile" class="w-10 h-10 rounded-full">
+                        <span class="font-semibold">Mua Bán Điện Thoại Cũ Giá Rẻ Hà Nội</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-lg transition-all dark:text-dark-txt dark:hover:bg-dark-third">
+                        <img src="./images/g3.jpg" alt="Profile" class="w-10 h-10 rounded-full">
+                        <span class="font-semibold">Rao Vặt Đại Học Mỏ - Tài Chính - Tài Nguyên - Y Tế Công Cộng</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-lg transition-all dark:text-dark-txt dark:hover:bg-dark-third">
+                        <img src="./images/g4.jpg" alt="Profile" class="w-10 h-10 rounded-full">
+                        <span class="font-semibold">Front-End Developer Việt Nam</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-lg transition-all dark:text-dark-txt dark:hover:bg-dark-third">
+                        <span class="w-10 h-10 rounded-full grid place-items-center bg-gray-200 dark:bg-dark-second">
+                            <i class='bx bxs-chevron-down'></i>
+                        </span>
+                        <span class="font-semibold">See more</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="mt-auto p-6 text-sm text-gray-500 dark:text-dark-txt">
+                <a href="#">Privacy</a>
+                <span>·</span>
+                <a href="#">Teams</a>
+                <span>·</span>
+                <a href="#">Advertising</a>
+                <span>·</span>
+                <a href="#">Cookies</a>
+                <span>·</span>
+                <a href="#">Ad choices</a>
+                <span>·</span>
+                <a href="#">More</a>
+                <span>·</span>
+                <a href="#">Facebook © 2021</a>
+            </div>
+        </div>
+
+        <!-- MAIN CONTENT  -->
+        <div class="w-full lg:w-2/3 xl:w-2/5 pt-32 lg:pt-16 px-2">
+            <!-- Story -->
+            <div class="relative flex pt-4 space-x-2">
+                <div class="w-1/4 sm:w-1/6 h-44 rounded-xl shadow overflow-hidden flex flex-col group cursor-pointer">
+                    <div class="h-3/5 overflow-hidden">
+                        <img src="./images/profile.jpg" alt="profile" class="group-hover:transform group-hover:scale-110 transition-all duration-700">
+                    </div>
+                    <div class="flex-1 relative flex items-end justify-center pb-2 text-center leading-none dark:bg-dark-second">
+                        <span class="font-semibold">Create a <br> Story </span>
+                        <div class="w-10 h-10 rounded-full bg-blue-500 text-white grid place-items-center text-2xl border-4 border-white
+                            dark:border-dark-second absolute -top-5 left-1/2 transform -translate-x-1/2">
+                            <i class='bx bx-plus' ></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-1/4 sm:w-1/6 h-44 rounded-xl shadow overflow-hidden">
+                    <div class="relative h-full group cursor-pointer">
+                        <img src="./images/story1.jpg" alt="story1" class="group-hover:transform group-hover:scale-110 transition-all duration-700 h-full w-full">
+                        <div class="w-full h-full bg-black absolute top-0 left-0 bg-opacity-10 "></div>
+                        <span class="absolute bottom-0 left-2 pb-2 font-semibold text-white">Your story</span>
+                        <div class="w-10 h-10 rounded-full overflow-hidden absolute top-2 left-2 border-4 border-blue-500">
+                            <img src="./images/profile.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-1/4 sm:w-1/6 h-44 rounded-xl shadow overflow-hidden">
+                    <div class="relative h-full group cursor-pointer">
+                        <img src="./images/story2.jpg" alt="story1" class="group-hover:transform group-hover:scale-110 transition-all duration-700 h-full w-full">
+                        <div class="w-full h-full bg-black absolute top-0 left-0 bg-opacity-10 "></div>
+                        <span class="absolute bottom-0 left-2 pb-2 font-semibold text-white">Đình Hậu</span>
+                        <div class="w-10 h-10 rounded-full overflow-hidden absolute top-2 left-2 border-4 border-blue-500">
+                            <img src="./images/avt-1.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-1/4 sm:w-1/6 h-44 rounded-xl shadow overflow-hidden">
+                    <div class="relative h-full group cursor-pointer">
+                        <img src="./images/story1.jpg" alt="story1" class="group-hover:transform group-hover:scale-110 transition-all duration-700 h-full w-full">
+                        <div class="w-full h-full bg-black absolute top-0 left-0 bg-opacity-10 "></div>
+                        <span class="absolute bottom-0 left-2 pb-2 font-semibold text-white">Nhung Minka</span>
+                        <div class="w-10 h-10 rounded-full overflow-hidden absolute top-2 left-2 border-4 border-blue-500">
+                            <img src="./images/avt-2.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-1/4 sm:w-1/6 h-44 rounded-xl shadow overflow-hidden">
+                    <div class="relative h-full group cursor-pointer">
+                        <img src="./images/story2.jpg" alt="story1" class="group-hover:transform group-hover:scale-110 transition-all duration-700 h-full w-full">
+                        <div class="w-full h-full bg-black absolute top-0 left-0 bg-opacity-10 "></div>
+                        <span class="absolute bottom-0 left-2 pb-2 font-semibold text-white">Quang Rùa</span>
+                        <div class="w-10 h-10 rounded-full overflow-hidden absolute top-2 left-2 border-4 border-blue-500">
+                            <img src="./images/avt-3.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-1/4 sm:w-1/6 h-44 rounded-xl shadow overflow-hidden">
+                    <div class="relative h-full group cursor-pointer">
+                        <img src="./images/story1.jpg" alt="story1" class="group-hover:transform group-hover:scale-110 transition-all duration-700 h-full w-full">
+                        <div class="w-full h-full bg-black absolute top-0 left-0 bg-opacity-10 "></div>
+                        <span class="absolute bottom-0 left-2 pb-2 font-semibold text-white">Đình Hà</span>
+                        <div class="w-10 h-10 rounded-full overflow-hidden absolute top-2 left-2 border-4 border-blue-500">
+                            <img src="./images/avt-1.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-12 h-12 rounded-full hidden lg:grid place-items-center text-2xl bg-white absolute -right-6 top-1/2 transform -translate-y-1/2 border border-gray-200
+                    cursor-pointer hover:bg-gray-100 shadow text-gray-500 dark:text-dark-txt dark:border-dark-third dark:border-dark-third">
+                    <i class='bx bx-right-arrow-alt'></i>
+                </div>
+            </div>
+            <!-- Post Form -->
+            <div class="px-4 mt-4 shadow rounded-lg bg-white dark:bg-dark-second">
+                <div class="p-2 pt-3 border-b border-gray-300 dark:border-dark-third flex space-x-4">
+                    <img src="./images/profile.jpg" alt="Profile" class="w-10 h-10 rounded-full">
+                    <div class="flex-1 bg-gray-100 rounded-full flex items-center justify-start pl-4 cursor-pointer dark:bg-dark-third
+                        text-gray-500 text-lg dark:text-dark-txt">
+                        <span>What's on your mind, Giang?</span>
+                    </div>
+                </div>
+                <div class="p-2 flex">
+                    <div class="w-1/3 flex space-x-2 justify-center items-center hover:bg-gray-100 dark:hover:bg-dark-third text-xl
+                        sm:text-3xl py-2 rounded-lg cursor-pointer text-red-500">
+                        <i class='bx bxs-video-plus' ></i>
+                        <span class="text-xs sm:text-sm font-semibold text-gray-500 dark:text-dark-txt">Live video</span>
+                    </div>
+                    <div class="w-1/3 flex space-x-2 justify-center items-center hover:bg-gray-100 dark:hover:bg-dark-third text-xl
+                    sm:text-3xl py-2 rounded-lg cursor-pointer text-green-500">
+                        <i class='bx bx-images' ></i>                       
+                        <span class="text-xs sm:text-sm font-semibold text-gray-500 dark:text-dark-txt">Photo/Video</span>
+                    </div>
+                    <div class="w-1/3 flex space-x-2 justify-center items-center hover:bg-gray-100 dark:hover:bg-dark-third text-xl
+                    sm:text-3xl py-2 rounded-lg cursor-pointer text-yellow-500">
+                        <i class='bx bx-smile' ></i>                        
+                        <span class="text-xs sm:text-sm font-semibold text-gray-500 dark:text-dark-txt">Feeling/Activity</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Room -->
+            <div class="p-4 mt-4 shadow rounded-lg bg-white dark:bg-dark-second overflow-hidden">
+                <div class="flex space-x-4 relative">
+                    <div class="w-1/2 lg:w-3/12 flex space-x-2 items-center justify-center border-2 border-blue-200 dark:border-blue-700 rounded-full cursor-pointer
+                    hover:bg-gray-100 dark:hover:bg-dark-third">
+                        <i class='bx bxs-video-plus text-2xl text-purple-500' ></i>
+                        <span class="text-sm font-semibold text-blue-500">Create Room</span>
+                    </div>
+                    <div class="relative cursor-pointer">
+                        <img src="./images/avt-1.jpg" alt="" class="rounded-full w-10 h-10">
+                        <span class="bg-green-500 w-3 h-3 rounded-full absolute right-0 top-3/4 border-white border-2"></span>
+                    </div>
+                    <div class="relative cursor-pointer">
+                        <img src="./images/avt-2.jpg" alt="" class="rounded-full w-10 h-10">
+                        <span class="bg-green-500 w-3 h-3 rounded-full absolute right-0 top-3/4 border-white border-2"></span>
+                    </div>
+                    <div class="relative cursor-pointer">
+                        <img src="./images/avt-3.jpg" alt="" class="rounded-full w-10 h-10">
+                        <span class="bg-green-500 w-3 h-3 rounded-full absolute right-0 top-3/4 border-white border-2"></span>
+                    </div>
+                    <div class="relative cursor-pointer">
+                        <img src="./images/avt-1.jpg" alt="" class="rounded-full w-10 h-10">
+                        <span class="bg-green-500 w-3 h-3 rounded-full absolute right-0 top-3/4 border-white border-2"></span>
+                    </div>
+                    <div class="relative cursor-pointer">
+                        <img src="./images/avt-2.jpg" alt="" class="rounded-full w-10 h-10">
+                        <span class="bg-green-500 w-3 h-3 rounded-full absolute right-0 top-3/4 border-white border-2"></span>
+                    </div>
+                    <div class="relative cursor-pointer">
+                        <img src="./images/avt-3.jpg" alt="" class="rounded-full w-10 h-10">
+                        <span class="bg-green-500 w-3 h-3 rounded-full absolute right-0 top-3/4 border-white border-2"></span>
+                    </div>
+                    <div class="relative cursor-pointer">
+                        <img src="./images/avt-1.jpg" alt="" class="rounded-full w-10 h-10">
+                        <span class="bg-green-500 w-3 h-3 rounded-full absolute right-0 top-3/4 border-white border-2"></span>
+                    </div>
+                    <div class="relative cursor-pointer">
+                        <img src="./images/avt-2.jpg" alt="" class="rounded-full w-10 h-10">
+                        <span class="bg-green-500 w-3 h-3 rounded-full absolute right-0 top-3/4 border-white border-2"></span>
+                    </div>
+                    <div class="relative cursor-pointer">
+                        <img src="./images/avt-3.jpg" alt="" class="rounded-full w-10 h-10">
+                        <span class="bg-green-500 w-3 h-3 rounded-full absolute right-0 top-3/4 border-white border-2"></span>
+                    </div>
+                    <div class="w-12 h-12 rounded-full hidden lg:grid place-items-center text-2xl text-gray-500 bg-white absolute
+                        right-0 -top-1 tranform boder border-gray-200 cursor-pointer hover:bg-gray-200 shadow
+                        dark:bg-dark-third dark:border-dark-third dark:text-dark-txt">
+                        <i class='bx bx-chevron-right' ></i>
+                    </div>
+                </div>
+            </div>
+            <!-- List Post -->
+            <div class="space-y-4 pb-4">
+                <div class="shadow bg-white dark:bg-dark-second dark:text-dark-txt mt-4 rounded-lg">
+                    <div class="flex items-center justify-between px-4 py-2">
+                        <div class="flex space-x-2 items-center">
+                            <div class="relative">
+                                <img src="./images/avt-1.jpg" alt="Profile" class="w-10 h-10 rounded-full">
+                                <span class="bg-green-500 w-3 h-3 rounded-full absolute right-0 top-3/4 border-white border-2"></span>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Đình Hậu</div>
+                                <div class="flex items-center justify-between text-sm text-gray-500" >
+                                    <span>38m</span>
+                                    <span>·</span>
+                                    <i class='bx bx-world' ></i>                                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-8 h-8 grid place-items-center text-xl hover:bg-gray-200 dark:hover:bg-dark-third rounded-full cursor-pointer">
+                            <i class='bx bx-dots-horizontal-rounded' ></i>
+                        </div>
+                    </div>
+                    <div class="text-justify px-4 py-1 font-light">
+                        Chẳng là nhà bạn Phớ sắp sửa nên bạn cần ra ngoài ở trong khoảng 2 tháng (tháng 3-4), hiện cần tìm phòng ở ghép gấp để có thể chủ nhật - thứ 2 đem đồ qua.
+                        <br>Đồ đạc mang theo gồm có: quần áo, dàn PC kèm 2 màn hình, tủ lạnh, lò vi sóng, 1 ghế xoay, 1 quạt công nghiệp nhỏ, đồ dùng cá nhân, 1 xe máy.
+                        <br>Tớ từng đi lính nên sạch sẽ gọn gàng. Cực dễ tính trong vđề tiền bạc. Tớ ít ở nhà nên anh em nào muốn mượn máy tính chơi thoải mái. Tiền nhà điện nước + ăn uống thanh toán đủ, ứng trước luôn 2 tháng cũng được.
+                        <br>Nay cần ở ghép với nam ở quanh khu Văn Quán - Học viện Kỹ thuật mật mã trong bán kính 3km đổ lại. Cần nhà khép kín không chung chủ (vì t hay dậy sớm chơi thể thao, chung chủ ngại các bác), nóng lạnh điều hoà nếu có là đẹp nhất 😀
+                        <br>Anh em nếu phòng nào còn trống thì ib cho tớ nhé, hoặc SĐT 0962 519 093 tên Tùng Anh. Thanks mn.
+                    </div>
+                    <div class="py-2">
+                        <img src="./images/post-2.jpg">
+                    </div>
+                    <div class="px-4 py-2">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <span class="rounded-full grid place-items-center w-5 h-5 bg-blue-300 text-white"><i class='bx bx-like' ></i></span>
+                                <span class="rounded-full grid place-items-center w-5 h-5 bg-red-300 text-white -ml-1"><i class='bx bxs-heart' ></i></span>
+                                <span class="ml-2 text-gray-500 font-light text-sm dark:text-dark-txt hover:underline">Nguyễn Trường Giang, Lân Hạnh and 3 others</span>
+                            </div>
+                            <div class="text-gray-500 font-light text-sm dark:text-dark-txt">
+                                <span class="hover:underline">15 Comments</span>
+                                <span class="ml-2 hover:underline">1 Shares</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-2 px-4">
+                        <div class="flex space-x-2 py-1 border-t border-b border-gray-200 dark:border-dark-third">
+                            <div class="w-1/3 flex space-x-2 justify-center items-center hover:bg-gray-200 dark:hover:bg-dark-third text-xl
+                                py-2 rounded-lg cursor-pointer text-gray-500 dark:text-dark-txt">
+                                <i class='bx bx-like' ></i>
+                                <span class="text-sm font-semibold">Like</span>
+                            </div>
+                            <div class="w-1/3 flex space-x-2 justify-center items-center hover:bg-gray-200 dark:hover:bg-dark-third text-xl
+                            py-2 rounded-lg cursor-pointer text-gray-500 dark:text-dark-txt">
+                                <i class='bx bx-comment' ></i>
+                                <span class="text-sm font-semibold">Comment</span>
+                            </div>
+                            <div class="w-1/3 flex space-x-2 justify-center items-center hover:bg-gray-200 dark:hover:bg-dark-third text-xl
+                            py-2 rounded-lg cursor-pointer text-gray-500 dark:text-dark-txt">
+                                <i class='bx bx-share bx-flip-horizontal' ></i>
+                                <span class="text-sm font-semibold">Share</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-4 py-2 space-y-2">
+                        <div class="flex space-x-2">
+                            <img src="./images/profile.jpg" alt="" class="w-9 h-9 rounded-full">
+                            <div class="flex-1 flex bg-gray-100 dark:bg-dark-third rounded-full items-center justify-between px-3">
+                                <input type="text" placeholder="Write a comment..." class="outline-none bg-transparent flex-1">
+                                <div class="flex space-x-0 items-center justify-center">
+                                    <span class="w-7 h-7 grid place-items-center rounded-full hover:bg-gray-200 cursor-pointer text-gray-500
+                                        text-xl dark:hover:bg-dark-second dark:text-dark-txt">
+                                        <i class='bx bx-smile' ></i>
+                                    </span>
+                                    <span class="w-7 h-7 grid place-items-center rounded-full hover:bg-gray-200 cursor-pointer text-gray-500
+                                    text-xl dark:hover:bg-dark-second dark:text-dark-txt">
+                                        <i class='bx bx-camera' ></i>
+                                    </span>
+                                    <span class="w-7 h-7 grid place-items-center rounded-full hover:bg-gray-200 cursor-pointer text-gray-500
+                                    text-xl dark:hover:bg-dark-second dark:text-dark-txt">
+                                        <i class='bx bxs-file-gif' ></i>
+                                    </span>
+                                    <span class="w-7 h-7 grid place-items-center rounded-full hover:bg-gray-200 cursor-pointer text-gray-500
+                                    text-xl dark:hover:bg-dark-second dark:text-dark-txt">
+                                        <i class='bx bx-sticker' ></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex space-x-2">
+                            <img src="./images/avt-2.jpg" alt="" class="w-9 h-9 rounded-full">
+                            <div>
+                                <div class="bg-gray-100 dark:bg-dark-third px-4 py-2 rounded-2xl text-sm">
+                                    <span class="font-semibold block">Nhung Minka</span>
+                                    <span>Nhà em thì hơi bé </span>
+                                </div>
+                                <div class="px-4 py-1 text-xs dark:text-dark-txt">
+                                    <div class="text-gray-500">
+                                        <span class="cursor-pointer hover:underline font-semibold">Like</span>
+                                        <span>·</span>
+                                        <span class="cursor-pointer hover:underline font-semibold">Reply</span>
+                                        <span>·</span>
+                                        <span class="cursor-pointer hover:underline">3h</span>
+                                    </div>
+
+                                    <div class="flex space-x-2 m-2">
+                                        <img src="./images/avt-3.jpg" alt="" class="w-6 h-6 rounded-full mt-2">
+                                        <div>
+                                            <div class="bg-gray-100 dark:bg-dark-third px-4 py-2 rounded-2xl text-sm">
+                                                <span class="font-semibold block">Quang Rùa</span>
+                                                <span>Phòng bạn mà ít ng là tớ qua luôn đấy </span>
+                                            </div>
+                                            <div class="px-4 py-1 text-xs text-gray-500 dark:text-dark-txt">
+                                                <span class="cursor-pointer hover:underline font-semibold">Like</span>
+                                                <span>·</span>
+                                                <span class="cursor-pointer hover:underline font-semibold">Reply</span>
+                                                <span>·</span>
+                                                <span class="cursor-pointer hover:underline">3h</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shadow bg-white dark:bg-dark-second dark:text-dark-txt mt-4 rounded-lg">
+                    <div class="flex items-center justify-between px-4 py-2">
+                        <div class="flex space-x-2 items-center">
+                            <div class="relative">
+                                <img src="./images/avt-1.jpg" alt="Profile" class="w-10 h-10 rounded-full">
+                                <span class="bg-green-500 w-3 h-3 rounded-full absolute right-0 top-3/4 border-white border-2"></span>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Đình Hậu</div>
+                                <div class="flex items-center justify-between text-sm text-gray-500" >
+                                    <span>38m</span>
+                                    <span>·</span>
+                                    <i class='bx bx-world' ></i>                                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-8 h-8 grid place-items-center text-xl hover:bg-gray-200 dark:hover:bg-dark-third rounded-full cursor-pointer">
+                            <i class='bx bx-dots-horizontal-rounded' ></i>
+                        </div>
+                    </div>
+                    <div class="text-justify px-4 py-1 font-light">
+                        Chẳng là nhà bạn Phớ sắp sửa nên bạn cần ra ngoài ở trong khoảng 2 tháng (tháng 3-4), hiện cần tìm phòng ở ghép gấp để có thể chủ nhật - thứ 2 đem đồ qua.
+                        <br>Đồ đạc mang theo gồm có: quần áo, dàn PC kèm 2 màn hình, tủ lạnh, lò vi sóng, 1 ghế xoay, 1 quạt công nghiệp nhỏ, đồ dùng cá nhân, 1 xe máy.
+                        <br>Tớ từng đi lính nên sạch sẽ gọn gàng. Cực dễ tính trong vđề tiền bạc. Tớ ít ở nhà nên anh em nào muốn mượn máy tính chơi thoải mái. Tiền nhà điện nước + ăn uống thanh toán đủ, ứng trước luôn 2 tháng cũng được.
+                        <br>Nay cần ở ghép với nam ở quanh khu Văn Quán - Học viện Kỹ thuật mật mã trong bán kính 3km đổ lại. Cần nhà khép kín không chung chủ (vì t hay dậy sớm chơi thể thao, chung chủ ngại các bác), nóng lạnh điều hoà nếu có là đẹp nhất 😀
+                        <br>Anh em nếu phòng nào còn trống thì ib cho tớ nhé, hoặc SĐT 0962 519 093 tên Tùng Anh. Thanks mn.
+                    </div>
+                    <div class="py-2">
+                        <img src="./images/post-2.jpg">
+                    </div>
+                    <div class="px-4 py-2">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <span class="rounded-full grid place-items-center w-5 h-5 bg-blue-300 text-white"><i class='bx bx-like' ></i></span>
+                                <span class="rounded-full grid place-items-center w-5 h-5 bg-red-300 text-white -ml-1"><i class='bx bxs-heart' ></i></span>
+                                <span class="ml-2 text-gray-500 font-light text-sm dark:text-dark-txt hover:underline">Nguyễn Trường Giang, Lân Hạnh and 3 others</span>
+                            </div>
+                            <div class="text-gray-500 font-light text-sm dark:text-dark-txt">
+                                <span class="hover:underline">15 Comments</span>
+                                <span class="ml-2 hover:underline">1 Shares</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-2 px-4">
+                        <div class="flex space-x-2 py-1 border-t border-b border-gray-200 dark:border-dark-third">
+                            <div class="w-1/3 flex space-x-2 justify-center items-center hover:bg-gray-200 dark:hover:bg-dark-third text-xl
+                                py-2 rounded-lg cursor-pointer text-gray-500 dark:text-dark-txt">
+                                <i class='bx bx-like' ></i>
+                                <span class="text-sm font-semibold">Like</span>
+                            </div>
+                            <div class="w-1/3 flex space-x-2 justify-center items-center hover:bg-gray-200 dark:hover:bg-dark-third text-xl
+                            py-2 rounded-lg cursor-pointer text-gray-500 dark:text-dark-txt">
+                                <i class='bx bx-comment' ></i>
+                                <span class="text-sm font-semibold">Comment</span>
+                            </div>
+                            <div class="w-1/3 flex space-x-2 justify-center items-center hover:bg-gray-200 dark:hover:bg-dark-third text-xl
+                            py-2 rounded-lg cursor-pointer text-gray-500 dark:text-dark-txt">
+                                <i class='bx bx-share bx-flip-horizontal' ></i>
+                                <span class="text-sm font-semibold">Share</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-4 py-2 space-y-2">
+                        <div class="flex space-x-2">
+                            <img src="./images/profile.jpg" alt="" class="w-9 h-9 rounded-full">
+                            <div class="flex-1 flex bg-gray-100 dark:bg-dark-third rounded-full items-center justify-between px-3">
+                                <input type="text" placeholder="Write a comment..." class="outline-none bg-transparent flex-1">
+                                <div class="flex space-x-0 items-center justify-center">
+                                    <span class="w-7 h-7 grid place-items-center rounded-full hover:bg-gray-200 cursor-pointer text-gray-500
+                                        text-xl dark:hover:bg-dark-second dark:text-dark-txt">
+                                        <i class='bx bx-smile' ></i>
+                                    </span>
+                                    <span class="w-7 h-7 grid place-items-center rounded-full hover:bg-gray-200 cursor-pointer text-gray-500
+                                    text-xl dark:hover:bg-dark-second dark:text-dark-txt">
+                                        <i class='bx bx-camera' ></i>
+                                    </span>
+                                    <span class="w-7 h-7 grid place-items-center rounded-full hover:bg-gray-200 cursor-pointer text-gray-500
+                                    text-xl dark:hover:bg-dark-second dark:text-dark-txt">
+                                        <i class='bx bxs-file-gif' ></i>
+                                    </span>
+                                    <span class="w-7 h-7 grid place-items-center rounded-full hover:bg-gray-200 cursor-pointer text-gray-500
+                                    text-xl dark:hover:bg-dark-second dark:text-dark-txt">
+                                        <i class='bx bx-sticker' ></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex space-x-2">
+                            <img src="./images/avt-2.jpg" alt="" class="w-9 h-9 rounded-full">
+                            <div>
+                                <div class="bg-gray-100 dark:bg-dark-third px-4 py-2 rounded-2xl text-sm">
+                                    <span class="font-semibold block">Nhung Minka</span>
+                                    <span>Nhà em thì hơi bé </span>
+                                </div>
+                                <div class="px-4 py-1 text-xs dark:text-dark-txt">
+                                    <div class="text-gray-500">
+                                        <span class="cursor-pointer hover:underline font-semibold">Like</span>
+                                        <span>·</span>
+                                        <span class="cursor-pointer hover:underline font-semibold">Reply</span>
+                                        <span>·</span>
+                                        <span class="cursor-pointer hover:underline">3h</span>
+                                    </div>
+
+                                    <div class="flex space-x-2 m-2">
+                                        <img src="./images/avt-3.jpg" alt="" class="w-6 h-6 rounded-full mt-2">
+                                        <div>
+                                            <div class="bg-gray-100 dark:bg-dark-third px-4 py-2 rounded-2xl text-sm">
+                                                <span class="font-semibold block">Quang Rùa</span>
+                                                <span>Phòng bạn mà ít ng là tớ qua luôn đấy </span>
+                                            </div>
+                                            <div class="px-4 py-1 text-xs text-gray-500 dark:text-dark-txt">
+                                                <span class="cursor-pointer hover:underline font-semibold">Like</span>
+                                                <span>·</span>
+                                                <span class="cursor-pointer hover:underline font-semibold">Reply</span>
+                                                <span>·</span>
+                                                <span class="cursor-pointer hover:underline">3h</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shadow bg-white dark:bg-dark-second dark:text-dark-txt mt-4 rounded-lg">
+                    <div class="flex items-center justify-between px-4 py-2">
+                        <div class="flex space-x-2 items-center">
+                            <div class="relative">
+                                <img src="./images/avt-1.jpg" alt="Profile" class="w-10 h-10 rounded-full">
+                                <span class="bg-green-500 w-3 h-3 rounded-full absolute right-0 top-3/4 border-white border-2"></span>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Đình Hậu</div>
+                                <div class="flex items-center justify-between text-sm text-gray-500" >
+                                    <span>38m</span>
+                                    <span>·</span>
+                                    <i class='bx bx-world' ></i>                                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-8 h-8 grid place-items-center text-xl hover:bg-gray-200 dark:hover:bg-dark-third rounded-full cursor-pointer">
+                            <i class='bx bx-dots-horizontal-rounded' ></i>
+                        </div>
+                    </div>
+                    <div class="text-justify px-4 py-1 font-light">
+                        Chẳng là nhà bạn Phớ sắp sửa nên bạn cần ra ngoài ở trong khoảng 2 tháng (tháng 3-4), hiện cần tìm phòng ở ghép gấp để có thể chủ nhật - thứ 2 đem đồ qua.
+                        <br>Đồ đạc mang theo gồm có: quần áo, dàn PC kèm 2 màn hình, tủ lạnh, lò vi sóng, 1 ghế xoay, 1 quạt công nghiệp nhỏ, đồ dùng cá nhân, 1 xe máy.
+                        <br>Tớ từng đi lính nên sạch sẽ gọn gàng. Cực dễ tính trong vđề tiền bạc. Tớ ít ở nhà nên anh em nào muốn mượn máy tính chơi thoải mái. Tiền nhà điện nước + ăn uống thanh toán đủ, ứng trước luôn 2 tháng cũng được.
+                        <br>Nay cần ở ghép với nam ở quanh khu Văn Quán - Học viện Kỹ thuật mật mã trong bán kính 3km đổ lại. Cần nhà khép kín không chung chủ (vì t hay dậy sớm chơi thể thao, chung chủ ngại các bác), nóng lạnh điều hoà nếu có là đẹp nhất 😀
+                        <br>Anh em nếu phòng nào còn trống thì ib cho tớ nhé, hoặc SĐT 0962 519 093 tên Tùng Anh. Thanks mn.
+                    </div>
+                    <div class="py-2">
+                        <img src="./images/post-2.jpg">
+                    </div>
+                    <div class="px-4 py-2">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <span class="rounded-full grid place-items-center w-5 h-5 bg-blue-300 text-white"><i class='bx bx-like' ></i></span>
+                                <span class="rounded-full grid place-items-center w-5 h-5 bg-red-300 text-white -ml-1"><i class='bx bxs-heart' ></i></span>
+                                <span class="ml-2 text-gray-500 font-light text-sm dark:text-dark-txt hover:underline">Nguyễn Trường Giang, Lân Hạnh and 3 others</span>
+                            </div>
+                            <div class="text-gray-500 font-light text-sm dark:text-dark-txt">
+                                <span class="hover:underline">15 Comments</span>
+                                <span class="ml-2 hover:underline">1 Shares</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-2 px-4">
+                        <div class="flex space-x-2 py-1 border-t border-b border-gray-200 dark:border-dark-third">
+                            <div class="w-1/3 flex space-x-2 justify-center items-center hover:bg-gray-200 dark:hover:bg-dark-third text-xl
+                                py-2 rounded-lg cursor-pointer text-gray-500 dark:text-dark-txt">
+                                <i class='bx bx-like' ></i>
+                                <span class="text-sm font-semibold">Like</span>
+                            </div>
+                            <div class="w-1/3 flex space-x-2 justify-center items-center hover:bg-gray-200 dark:hover:bg-dark-third text-xl
+                            py-2 rounded-lg cursor-pointer text-gray-500 dark:text-dark-txt">
+                                <i class='bx bx-comment' ></i>
+                                <span class="text-sm font-semibold">Comment</span>
+                            </div>
+                            <div class="w-1/3 flex space-x-2 justify-center items-center hover:bg-gray-200 dark:hover:bg-dark-third text-xl
+                            py-2 rounded-lg cursor-pointer text-gray-500 dark:text-dark-txt">
+                                <i class='bx bx-share bx-flip-horizontal' ></i>
+                                <span class="text-sm font-semibold">Share</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-4 py-2 space-y-2">
+                        <div class="flex space-x-2">
+                            <img src="./images/profile.jpg" alt="" class="w-9 h-9 rounded-full">
+                            <div class="flex-1 flex bg-gray-100 dark:bg-dark-third rounded-full items-center justify-between px-3">
+                                <input type="text" placeholder="Write a comment..." class="outline-none bg-transparent flex-1">
+                                <div class="flex space-x-0 items-center justify-center">
+                                    <span class="w-7 h-7 grid place-items-center rounded-full hover:bg-gray-200 cursor-pointer text-gray-500
+                                        text-xl dark:hover:bg-dark-second dark:text-dark-txt">
+                                        <i class='bx bx-smile' ></i>
+                                    </span>
+                                    <span class="w-7 h-7 grid place-items-center rounded-full hover:bg-gray-200 cursor-pointer text-gray-500
+                                    text-xl dark:hover:bg-dark-second dark:text-dark-txt">
+                                        <i class='bx bx-camera' ></i>
+                                    </span>
+                                    <span class="w-7 h-7 grid place-items-center rounded-full hover:bg-gray-200 cursor-pointer text-gray-500
+                                    text-xl dark:hover:bg-dark-second dark:text-dark-txt">
+                                        <i class='bx bxs-file-gif' ></i>
+                                    </span>
+                                    <span class="w-7 h-7 grid place-items-center rounded-full hover:bg-gray-200 cursor-pointer text-gray-500
+                                    text-xl dark:hover:bg-dark-second dark:text-dark-txt">
+                                        <i class='bx bx-sticker' ></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex space-x-2">
+                            <img src="./images/avt-2.jpg" alt="" class="w-9 h-9 rounded-full">
+                            <div>
+                                <div class="bg-gray-100 dark:bg-dark-third px-4 py-2 rounded-2xl text-sm">
+                                    <span class="font-semibold block">Nhung Minka</span>
+                                    <span>Nhà em thì hơi bé </span>
+                                </div>
+                                <div class="px-4 py-1 text-xs dark:text-dark-txt">
+                                    <div class="text-gray-500">
+                                        <span class="cursor-pointer hover:underline font-semibold">Like</span>
+                                        <span>·</span>
+                                        <span class="cursor-pointer hover:underline font-semibold">Reply</span>
+                                        <span>·</span>
+                                        <span class="cursor-pointer hover:underline">3h</span>
+                                    </div>
+
+                                    <div class="flex space-x-2 m-2">
+                                        <img src="./images/avt-3.jpg" alt="" class="w-6 h-6 rounded-full mt-2">
+                                        <div>
+                                            <div class="bg-gray-100 dark:bg-dark-third px-4 py-2 rounded-2xl text-sm">
+                                                <span class="font-semibold block">Quang Rùa</span>
+                                                <span>Phòng bạn mà ít ng là tớ qua luôn đấy </span>
+                                            </div>
+                                            <div class="px-4 py-1 text-xs text-gray-500 dark:text-dark-txt">
+                                                <span class="cursor-pointer hover:underline font-semibold">Like</span>
+                                                <span>·</span>
+                                                <span class="cursor-pointer hover:underline font-semibold">Reply</span>
+                                                <span>·</span>
+                                                <span class="cursor-pointer hover:underline">3h</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="w-1/5 pt-16 hidden h-full xl:block px-4 fixed top-0 right-0">
+            <div class="h-full">
+                <div class="flex items-center justify-between px-4 pt-4">
+                    <span class="font-semibold text-gray-500 text-lg dark:text-dark-txt">Friends requests</span>
+                    <span class="text-blue-500 cursor-pointer hover:bg-gray-200 dark:hover:bg-dark-third p-2 rounded-md ">See All</span>
+                </div>
+                <div class="pt-2">
+                    <a href="#" class="flex items-center space-x-4 p-2 hover:bg-gray-200 dark:hover:bg-dark-third rounded-lg transition-all">
+                        <img src="./images/pt.jpg" alt="Profile" class="w-16 h-16 rounded-full">
+                        <div class="flex-1 h-full">
+                            <div class="dark:text-dark-txt">
+                                <span class="font-semibold">Nguyễn Thị Phương Trang</span>
+                                <span class="float-right">6d</span>
+                            </div>
+                            <div class="flex space-x-2 mt-2">
+                                <div class="w-1/2 bg-blue-500 hover:bg-blue-400 cursor-pointer py-1 text-center font-semibold text-white rounded-lg">
+                                    Confirm
+                                </div>
+                                <div class="w-1/2 bg-gray-300 hover:bg-gray-200 cursor-pointer py-1 text-center font-semibold text-white rounded-lg">
+                                    Delete
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="border-b border-gray-200 dark:border-dark-third mt-6"></div>
+                <div class="flex justify-between items-center px-4 py-4 text-gray-500 dark:text-dark-txt">
+                    <span class="font-semibold text-lg">Contacts</span>
+                    <div class="flex space-x-1">
+                        <div class="w-8 h-8 grid place-items-center text-xl hover:bg-gray-200 dark:hover:bg-dark-third rounded-full cursor-pointer">
+                            <i class='bx bx-search-alt-2' ></i>
+                        </div>
+                        <div class="w-8 h-8 grid place-items-center text-xl hover:bg-gray-200 dark:hover:bg-dark-third rounded-full cursor-pointer">
+                            <i class='bx bx-dots-horizontal-rounded' ></i>
+                        </div>
+                    </div>
+                </div>
+                <ul class="p-2">
+                    <li>
+                        <div class="flex items-center space-x-4 p-2 hover:bg-gray-200 dark:hover:bg-dark-third dark:text-dark-txt rounded-lg cursor-pointer">
+                            <div class="relative">
+                                <img src="./images/avt-1.jpg" alt="Friends" class=" w-10 h-10 rounded-full">
+                                <span class="bg-green-500 w-3 h-3 rounded-full absolute right-0 top-3/4 border-white border-2"></span>
+                            </div>
+                            <div>
+                                <span class="font-semibold">Đình Hậu</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center space-x-4 p-2 hover:bg-gray-200 dark:hover:bg-dark-third dark:text-dark-txt rounded-lg cursor-pointer">
+                            <div class="relative">
+                                <img src="./images/avt-2.jpg" alt="Friends" class=" w-10 h-10 rounded-full">
+                                <span class="bg-green-500 w-3 h-3 rounded-full absolute right-0 top-3/4 border-white border-2"></span>
+                            </div>
+                            <div>
+                                <span class="font-semibold">Nhung Minka</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center space-x-4 p-2 hover:bg-gray-200 dark:hover:bg-dark-third dark:text-dark-txt rounded-lg cursor-pointer">
+                            <div class="relative">
+                                <img src="./images/avt-3.jpg" alt="Friends" class=" w-10 h-10 rounded-full">
+                                <span class="bg-green-500 w-3 h-3 rounded-full absolute right-0 top-3/4 border-white border-2"></span>
+                            </div>
+                            <div>
+                                <span class="font-semibold">Quang Rùa</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center space-x-4 p-2 hover:bg-gray-200 dark:hover:bg-dark-third dark:text-dark-txt rounded-lg cursor-pointer">
+                            <div class="relative">
+                                <img src="./images/avt-1.jpg" alt="Friends" class=" w-10 h-10 rounded-full">
+                                <span class="bg-green-500 w-3 h-3 rounded-full absolute right-0 top-3/4 border-white border-2"></span>
+                            </div>
+                            <div>
+                                <span class="font-semibold">Đình Hậu</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center space-x-4 p-2 hover:bg-gray-200 dark:hover:bg-dark-third dark:text-dark-txt rounded-lg cursor-pointer">
+                            <div class="relative">
+                                <img src="./images/avt-2.jpg" alt="Friends" class=" w-10 h-10 rounded-full">
+                                <span class="bg-green-500 w-3 h-3 rounded-full absolute right-0 top-3/4 border-white border-2"></span>
+                            </div>
+                            <div>
+                                <span class="font-semibold">Nhung Minka</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center space-x-4 p-2 hover:bg-gray-200 dark:hover:bg-dark-third dark:text-dark-txt rounded-lg cursor-pointer">
+                            <div class="relative">
+                                <img src="./images/avt-3.jpg" alt="Friends" class=" w-10 h-10 rounded-full">
+                                <span class="bg-green-500 w-3 h-3 rounded-full absolute right-0 top-3/4 border-white border-2"></span>
+                            </div>
+                            <div>
+                                <span class="font-semibold">Quang Rùa</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center space-x-4 p-2 hover:bg-gray-200 dark:hover:bg-dark-third dark:text-dark-txt rounded-lg cursor-pointer">
+                            <div class="relative">
+                                <img src="./images/avt-1.jpg" alt="Friends" class=" w-10 h-10 rounded-full">
+                                <span class="bg-green-500 w-3 h-3 rounded-full absolute right-0 top-3/4 border-white border-2"></span>
+                            </div>
+                            <div>
+                                <span class="font-semibold">Đình Hậu</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center space-x-4 p-2 hover:bg-gray-200 dark:hover:bg-dark-third dark:text-dark-txt rounded-lg cursor-pointer">
+                            <div class="relative">
+                                <img src="./images/avt-2.jpg" alt="Friends" class=" w-10 h-10 rounded-full">
+                                <span class="bg-green-500 w-3 h-3 rounded-full absolute right-0 top-3/4 border-white border-2"></span>
+                            </div>
+                            <div>
+                                <span class="font-semibold">Nhung Minka</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center space-x-4 p-2 hover:bg-gray-200 dark:hover:bg-dark-third dark:text-dark-txt rounded-lg cursor-pointer">
+                            <div class="relative">
+                                <img src="./images/avt-3.jpg" alt="Friends" class=" w-10 h-10 rounded-full">
+                                <span class="bg-green-500 w-3 h-3 rounded-full absolute right-0 top-3/4 border-white border-2"></span>
+                            </div>
+                            <div>
+                                <span class="font-semibold">Quang Rùa</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center space-x-4 p-2 hover:bg-gray-200 dark:hover:bg-dark-third dark:text-dark-txt rounded-lg cursor-pointer">
+                            <div class="relative">
+                                <img src="./images/avt-1.jpg" alt="Friends" class=" w-10 h-10 rounded-full">
+                                <span class="bg-green-500 w-3 h-3 rounded-full absolute right-0 top-3/4 border-white border-2"></span>
+                            </div>
+                            <div>
+                                <span class="font-semibold">Đình Hậu</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center space-x-4 p-2 hover:bg-gray-200 dark:hover:bg-dark-third dark:text-dark-txt rounded-lg cursor-pointer">
+                            <div class="relative">
+                                <img src="./images/avt-2.jpg" alt="Friends" class=" w-10 h-10 rounded-full">
+                                <span class="bg-green-500 w-3 h-3 rounded-full absolute right-0 top-3/4 border-white border-2"></span>
+                            </div>
+                            <div>
+                                <span class="font-semibold">Nhung Minka</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center space-x-4 p-2 hover:bg-gray-200 dark:hover:bg-dark-third dark:text-dark-txt rounded-lg cursor-pointer">
+                            <div class="relative">
+                                <img src="./images/avt-3.jpg" alt="Friends" class=" w-10 h-10 rounded-full">
+                                <span class="bg-green-500 w-3 h-3 rounded-full absolute right-0 top-3/4 border-white border-2"></span>
+                            </div>
+                            <div>
+                                <span class="font-semibold">Quang Rùa</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center space-x-4 p-2 hover:bg-gray-200 dark:hover:bg-dark-third dark:text-dark-txt rounded-lg cursor-pointer">
+                            <div class="relative">
+                                <img src="./images/avt-1.jpg" alt="Friends" class=" w-10 h-10 rounded-full">
+                                <span class="bg-green-500 w-3 h-3 rounded-full absolute right-0 top-3/4 border-white border-2"></span>
+                            </div>
+                            <div>
+                                <span class="font-semibold">Đình Hậu</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center space-x-4 p-2 hover:bg-gray-200 dark:hover:bg-dark-third dark:text-dark-txt rounded-lg cursor-pointer">
+                            <div class="relative">
+                                <img src="./images/avt-2.jpg" alt="Friends" class=" w-10 h-10 rounded-full">
+                                <span class="bg-green-500 w-3 h-3 rounded-full absolute right-0 top-3/4 border-white border-2"></span>
+                            </div>
+                            <div>
+                                <span class="font-semibold">Nhung Minka</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center space-x-4 p-2 hover:bg-gray-200 dark:hover:bg-dark-third dark:text-dark-txt rounded-lg cursor-pointer">
+                            <div class="relative">
+                                <img src="./images/avt-3.jpg" alt="Friends" class=" w-10 h-10 rounded-full">
+                                <span class="bg-green-500 w-3 h-3 rounded-full absolute right-0 top-3/4 border-white border-2"></span>
+                            </div>
+                            <div>
+                                <span class="font-semibold">Quang Rùa</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- END MAIN -->
+    <script src="./static/app.js"></script>
+</body>
+</html>
